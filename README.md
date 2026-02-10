@@ -18,7 +18,7 @@ This repository provides:
 ## 📂 Repository Layout
 
 ```
-Nova_Ransomeware/
+Nova_Ransomware/
 ├── notebooks/      # Jupyter notebooks (IR workflow + correlations)
 ├── docs/           # MITRE mapping + mock executive summary
 ├── detections/     # Sigma + YARA-L examples (defensive only)
