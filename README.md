@@ -12,6 +12,7 @@ This repository provides:
 - **Log sources** required to investigate modern ransomware intrusions end-to-end
 - **Non-overlapping** correlation logic for Microsoft Sentinel (KQL) and Splunk (SPL)
 - Investigation notebooks that turn logs into scope, timeline, and containment actions
+- **SOC runbooks** with RACI, compliance mappings, and workflow diagrams
 
 ---
 
@@ -19,11 +20,12 @@ This repository provides:
 
 ```
 Nova_Ransomware/
-├── notebooks/      # Jupyter notebooks (IR workflow + correlations)
-├── docs/           # MITRE mapping + mock executive summary
-├── detections/     # Sigma + YARA-L examples (defensive only)
-├── screenshots/    # Timeline diagrams
-└── data/           # Intentionally empty; guidance only (no logs committed)
+├── notebooks/                  # Jupyter notebooks (IR workflow + correlations)
+├── docs/                       # MITRE mapping + mock executive summary
+├── detections/                 # Sigma + YARA-L examples (defensive only)
+├── screenshots/                # Timeline diagrams
+├── nova-ransomware-runbook/    # SOC runbook pack (runbooks, RACI, compliance mapping)
+└── data/                       # Intentionally empty; guidance only (no logs committed)
 ```
 
 ---
@@ -300,6 +302,20 @@ Use `DeviceNetworkEvents` to map **DeviceName → LocalIP**
 
 ### Option 2: DHCP/CMDB Lookups
 Best for dynamic IP environments
+
+---
+
+## 📚 SOC Runbook Pack
+
+The **nova-ransomware-runbook/** directory contains operational materials for SOC teams:
+
+- **One-page SOC runbook** — Step-by-step response procedures for M365 and Google Workspace
+- **RACI matrix** — Role assignment and accountability framework
+- **Workflow diagram** — Visual incident response flow (Mermaid format)
+- **Compliance mappings** — ISO 27001, NIST CSF & 800-53, SOC 2 control mappings
+- **Vendor security addendum** — Contract-ready clause for vendor agreements
+
+See [nova-ransomware-runbook/README.md](nova-ransomware-runbook/README.md) for details.
 
 ---
 
