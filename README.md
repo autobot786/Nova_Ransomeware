@@ -335,7 +335,7 @@ See [nova-ransomware-runbook/README.md](nova-ransomware-runbook/README.md) for d
 
 ## 👤 Author
 
-**Sanjeev**  
+**autobot786**  
 Incident Response / DFIR
 
 ---
