@@ -1,0 +1,29 @@
+```mermaid
+flowchart TD
+  A[Alert / Suspicion of NOVA Ransomware] --> B{Trigger Criteria Met?}
+  B -- No --> Z[Close / Monitor / Document]
+  B -- Yes --> C[Declare SEV-1 + Start Bridge + Assign IC]
+  C --> D[Preserve Evidence & Start Timeline]
+  D --> E[Containment: Isolate Hosts + Disable Accounts + Block IOCs]
+  E --> F{M365 or Google Workspace?}
+
+  F -- M365 --> M1[Entra: Disable user + Revoke sessions/tokens + Review OAuth apps]
+  M1 --> M2[Defender: Isolate device + Collect package + Hunt]
+  M2 --> G[Scope & Exfiltration Assessment]
+
+  F -- Google --> G1[Suspend user + Invalidate sessions + Review OAuth/delegation]
+  G1 --> G2[Quarantine endpoints + Collect forensics + Hunt]
+  G2 --> G[Scope & Exfiltration Assessment]
+
+  G --> H{Active Encryption Continuing?}
+  H -- Yes --> E
+  H -- No --> I[Eradication: Remove persistence + Patch + Rotate secrets]
+  I --> J[Recovery: Restore from immutable backups + Validate]
+  J --> K[Heightened Monitoring 14-30 days]
+  K --> L{Notification Required?}
+  L -- Yes --> N[Legal/Privacy leads notifications + Comms approved messaging]
+  L -- No --> O[Document decision rationale]
+  N --> P[Post-Incident Review + Corrective Actions]
+  O --> P
+  P --> Q[Close Incident: Exit criteria met + Exec sign-off]
+```
