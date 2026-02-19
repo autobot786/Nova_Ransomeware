@@ -2,7 +2,7 @@
 
 A defensive, portfolio-grade **Incident Response Lead** repository documenting ransomware investigation procedures.
 
-> ⚠️ **Disclaimer:** This project contains **no malware**, **no real victim data**, and is intended for **defensive education** and DFIR practice only.
+>  **Disclaimer:** This project contains **no malware**, **no real victim data**, and is intended for **defensive education** and DFIR practice only.
 
 ---
 
@@ -16,7 +16,7 @@ This repository provides:
 
 ---
 
-## 📂 Repository Layout
+##  Repository Layout
 
 ```
 Nova_Ransomware/
@@ -54,9 +54,9 @@ Nova_Ransomware/
 
 ---
 
-## 📊 Required Log Types
+##  Required Log Types
 
-### 1️⃣ Endpoint Execution & Impact
+### 1️ Endpoint Execution & Impact
 
 **Purpose:** Identify payload execution, pre-encryption prep, and encryption impact
 
@@ -75,7 +75,7 @@ Nova_Ransomware/
 
 ---
 
-### 2️⃣ Authentication & Privilege Changes
+### 2️ Authentication & Privilege Changes
 
 **Purpose:** Detect credential abuse and privilege escalation
 
@@ -90,7 +90,7 @@ Nova_Ransomware/
 
 ---
 
-### 3️⃣ Lateral Movement Execution Channels
+### 3️ Lateral Movement Execution Channels
 
 **Purpose:** Detect remote execution and admin tooling misuse
 
@@ -110,7 +110,7 @@ Monitor for:
 
 ---
 
-### 4️⃣ Network Egress & Possible Exfiltration
+### 4️ Network Egress & Possible Exfiltration
 
 **Purpose:** Detect pre-encryption staging/exfil and block paths quickly
 
@@ -127,7 +127,7 @@ Data arrives in:
 
 ---
 
-### 5️⃣ Backup / Recovery Tampering
+### 5️ Backup / Recovery Tampering
 
 **Purpose:** Identify attempts to prevent recovery
 
@@ -144,7 +144,7 @@ Data arrives in:
 
 ---
 
-## 🔍 Correlation Logic
+##  Correlation Logic
 
 Each query serves a **distinct IR decision point** with non-overlapping logic.
 
@@ -293,7 +293,7 @@ index=cloudflare earliest=-24h
 
 ---
 
-## 🔗 Joining Cloudflare ↔ Endpoint Data
+##  Joining Cloudflare ↔ Endpoint Data
 
 To correlate Cloudflare `src_ip` to a specific device:
 
@@ -305,7 +305,7 @@ Best for dynamic IP environments
 
 ---
 
-## 📚 SOC Runbook Pack
+##  SOC Runbook Pack
 
 The **nova-ransomware-runbook/** directory contains operational materials for SOC teams:
 
@@ -319,27 +319,27 @@ See [nova-ransomware-runbook/README.md](nova-ransomware-runbook/README.md) for d
 
 ---
 
-## ⚖️ Safety & Ethics
+##  Safety & Ethics
 
-### ⛔ Do NOT:
+###  Do NOT:
 - Upload production logs, PII, or customer data
 - Store or distribute ransomware binaries
 - Use for offensive purposes
 
-### ✅ DO:
+###  DO:
 - Use this repo for defensive detection engineering
 - Practice IR readiness and DFIR skills
 - Contribute improvements and share knowledge
 
 ---
 
-## 👤 Author
+##  Author
 
 **Autobot786**  
 Incident Response / DFIR
 
 ---
 
-## 📜 License
+##  License
 
 This project is for educational and defensive purposes only.
